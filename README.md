@@ -25,29 +25,8 @@ You can use it with node, laravel, php, adminpanel
 			$(".container").css("height","500px");
 			flag=0;
 			return;
-		}
+}
 		
-	}
-	$(".hidenfield").hide() 
-	
-	var filterflag=0;
-	function showData(){
-		if(filterflag==0){
-			$("#hiddenRow").show()
-			$("#filterResults").show()
-			$("#option").show()
-			filterflag=1;
-			return;
-		}
-		if(filterflag==1){
-			
-			$("#filterResults").hide()
-			filterflag=0;
-			return;
-		}
-		
-	}
-</script>
 
 
 ## Display first page
