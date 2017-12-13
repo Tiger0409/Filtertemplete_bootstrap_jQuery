@@ -24,4 +24,5 @@ You can use it with node, laravel, php, adminpanel
 
 !["Filtertemplete_bootstrap_jQuery Presentation"](https://github.com/Tiger0409/Filtertemplete_bootstrap_jQuery/blob/master/img/6.PNG "Filtertemplete_bootstrap_jQuery Presentation")
 
-I sincerely hope that your project is doing well.
+
+## I sincerely hope that your project is doing well.
