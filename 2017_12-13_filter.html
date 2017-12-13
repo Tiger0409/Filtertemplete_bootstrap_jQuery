@@ -1,0 +1,198 @@
+<html lang="en"><head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div><h1 style="text-align: center;margin-top: 2%;">Maket</h1></div>
+<div><h3  style="text-align: right;margin-bottom: 0%; margin-right: 5%; font-family: Segoe UI,Arial,sans-serif;">My Account</h3></div>
+<div class="row">
+   <div class="container col-md-3 col-sm-4" style="margin-top: 20px;margin-left:2%;box-sizing: border-box;  height: 500px; border: 6px solid black; border-radius: 30px; ">
+
+		  <h2 style="text-align: center; margin-top: 5%;">Filters</h2>
+		  <hr style="background-color:black;height:5px;width:80%;margin-left:10%;"></hr>
+		<div id="hiddenRow">
+		  <div class="row"  style="margin-top: 5%;width:100%">
+		    <label style="float:left;margin-left: 10%;margin-top: 0.5%;">Exchange:</label>
+		    <input class=" form-control"  type="text" placeholder="Search.." style="width:65%;float:left;margin-left: 3%;" >
+		    <br>
+		  </div>                                                                                                               
+		  <div class="row"  style="width:100%">
+		    <br>
+		    <label style="float:left;margin-left: 10%;margin-top: 0.5%;" >Prediction Date:</label>
+		    <br>
+		  </div>
+		  <div class="row"  style="width:100%">
+		    <br>
+			<input class=" form-control"   type="Date" placeholder="" style="width:88%;margin-left: 10%;" ></input>
+		  </div>
+			  <div class="row hidenfield"  style="width:100%">
+		    	<br>
+			    <label style="float:left;margin-left: 10%;margin-top: 0.5%;">Listing Date:</label>
+			    <br>
+			    <br>
+				<input class="form-control" id="myInput"  type="Date" placeholder="" style="width:88%;margin-left: 10%;" ></input>
+			  </div>
+		    <div class="row"  style="margin-top: 40px;width:100%">
+			    <label style="float:left;margin-left: 10%;margin-top: 2%;">Seller Escrow:</label>
+			    <input class=" form-control" id="myInput"  type="checkbox" style="width:5%;float:left;margin-left:50%;" >
+			    <br>
+		    </div>
+			<div class="row hidenfield"  style="100%;">
+			  <br>
+			  <label style="float:left;margin-left: 10%;margin-top: 0.5%;" >Past Retruns For This Stock</label>
+			  <br>
+			  <br>
+			</div>
+
+			<div class="row hidenfield"  >
+				<div  style="float:left;width:15%;margin-left:10%;">
+					<input class="form-control"  type="number" placeholder=""  />
+				</div>
+				<div style="float:left;margin-left:3px;padding-top:7px;">%</div>
+				<div style="float:left;margin-left:20%;">-----</div>
+				<div  style="float:left;width:15%;margin-left:15%;">
+					<input class="form-control"  type="number" placeholder="" />
+				</div>
+				<div style="float:left;margin-left:3px;padding-top:7px;">%</div>
+			</div>
+			
+			<div class="row hidenfield" style="100%;"  >
+			  <br>
+			  <label style="float:left;margin-left: 10%;margin-top: 0.5%;" >Users Past Retruns</label>
+			  <br>
+			  <br>
+			</div>
+			<div class="row hidenfield" style="margin-top:20px;"  >
+				<div  style="float:left;width:15%;margin-left:10%;">
+					<input class="form-control"  type="number" placeholder=""  />
+				</div>
+				<div style="float:left;margin-left:3px;padding-top:7px;">%</div>
+				<div style="float:left;margin-left:20%;">-----</div>
+				<div  style="float:left;width:15%;margin-left:15%;">
+					<input class="form-control"  type="number" placeholder="" />
+				</div>
+				<div style="float:left;margin-left:3px;padding-top:7px;">%</div>
+			</div>
+	  </div>
+	  <div class="row">
+		  <br>
+		  <button class=" form-control" id="myInput"  type="text" style="width:88%;margin-left: 6%;background-color:#178430; border-radius: 10px;height: 34px; " onclick="showData()">Filter</button>
+		  <br>
+		  <button class=" form-control" id="option" type="text" style="width:88%;margin-left: 6%; border-radius: 10px;height: 34px; " onclick="show()" >More Option</button>
+		  <br><br>
+	  </div>
+	</div>
+	 <div class="ofset-md-3 col-md-8 col-sm-8"  style="margin-top: 20px;margin-left: 2.7%; box-sizing: border-box;  min-height:900px;height: auto; border: 6px solid black; border-radius: 30px; ">
+
+	  <div class="row hidenfield" style="width:100%;" id="filterResults" >
+		<div class="row">
+	
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left; margin-top: 2%; margin-left: 5%;"> Listing User: hello123</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left; margin-top: 2%; margin-left: 20%;"> Users Overall Record:28%</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Stock Industry: Restraunt</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Users Record With This Stock: 14%</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Escrow: Yes</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Price: $1,242.24</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Listing Date: 11-29-2017</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Expiration Date: 11-29-20117</h4>
+		  <hr style="background-color:black;height:5px;width:90%;margin-left:6.5%;"></hr>
+	    </div>
+	    <div class="row">
+	
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left; margin-top: 2%; margin-left: 5%;"> Listing User: hello123</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left; margin-top: 2%; margin-left: 20%;"> Users Overall Record:28%</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Stock Industry: Restraunt</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Users Record With This Stock: 14%</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Escrow: Yes</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Price: $1,242.24</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Listing Date: 11-29-2017</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Expiration Date: 11-29-20117</h4>
+		  <hr style="background-color:black;height:5px;width:90%;margin-left:6.5%;"></hr>
+	    </div>
+	    <div class="row">
+	
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left; margin-top: 2%; margin-left: 5%;"> Listing User: hello123</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left; margin-top: 2%; margin-left: 20%;"> Users Overall Record:28%</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Stock Industry: Restraunt</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Users Record With This Stock: 14%</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Escrow: Yes</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Price: $1,242.24</h4>
+	    </div>
+	    <div class="row">
+		  <h4 class="col-md-4 offset-md-4"  style="float:  left;  margin-left: 5%;"> Listing Date: 11-29-2017</h4>
+		  <h4 class="col-md-5 offset-md-6"  style="float:  left;  margin-left: 20%;"> Expiration Date: 11-29-20117</h4>
+		  <hr style="background-color:black;height:5px;width:90%;margin-left:6.5%;"></hr>
+	    </div>
+	   
+
+	 </div>
+	</div>
+  </div>
+</div>
+
+
+<script>
+	var flag=0;
+	function show(){
+		if(flag==0){
+			$(".hidenfield").show() 
+			$("#option").text('Less Option');
+			$("#filterResults").hide()
+			flag=1;
+			$(".container").css("height","900px");
+			return;
+		}
+		if(flag==1){
+			$(".hidenfield").hide() 
+			$("#option").text('More Option');
+			$("#filterResults").hide()
+			$(".container").css("height","500px");
+			flag=0;
+			return;
+		}
+		
+	}
+	$(".hidenfield").hide() 
+	
+	var filterflag=0;
+	function showData(){
+		if(filterflag==0){
+			$("#hiddenRow").show()
+			$("#filterResults").show()
+			$("#option").show()
+			filterflag=1;
+			return;
+		}
+		if(filterflag==1){
+			
+			$("#filterResults").hide()
+			filterflag=0;
+			return;
+		}
+		
+	}
+</script>
+
+
+</body></html>
