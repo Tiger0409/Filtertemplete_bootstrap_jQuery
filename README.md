@@ -6,28 +6,9 @@ This is Filter templete use BootStrap, jQuery, Css.
 I created a template to search the data by using various filters.
 It is mobile and iPad friendly.
 You can use it with node, laravel, php, adminpanel
-
-<script>
-	var flag=0;
-	function show(){
-		if(flag==0){
-			$(".hidenfield").show() 
-			$("#option").text('Less Option');
-			$("#filterResults").hide()
-			flag=1;
-			$(".container").css("height","900px");
-			return;
-		}
-		if(flag==1){
-			$(".hidenfield").hide() 
-			$("#option").text('More Option');
-			$("#filterResults").hide()
-			$(".container").css("height","500px");
-			flag=0;
-			return;
-}
 		
-
+## Code
+!["Filtertemplete_bootstrap_jQuery Presentation"](https://github.com/Tiger0409/Filtertemplete_bootstrap_jQuery/blob/master/img/7.PNG "Filtertemplete_bootstrap_jQuery Presentation")
 
 ## Display first page
 !["Filtertemplete_bootstrap_jQuery Presentation"](https://github.com/Tiger0409/Filtertemplete_bootstrap_jQuery/blob/master/img/1.PNG "Filtertemplete_bootstrap_jQuery Presentation")
